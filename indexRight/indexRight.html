@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Normal scrolling - fullPage.js</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage full-screen normal scrolling with autoScrolling." />
+    <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,normal scroll,autoscrolling, scroll" />
+    <meta name="Resource-type" content="Document" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="aos.css" />
+
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="examples.css" />
+    <style>
+
+    @font-face {
+      font-family: 'RIDIBatang';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+                         }
+    * {padding: 0; margin: 0;}
+
+      body{
+        font-family:'RIDIBatang',
+        '리디바탕',
+         ng;
+
+      }
+
+
+      header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 75px;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+      }
+      .Main{position: relative;
+			height: 100vh;}
+
+      .Logo {
+        width:600px;
+        height:375px;
+        position:relative;
+        top:-750px;
+        left:-250px;
+         }
+
+         .Logo img {
+              position: relative;
+              top:680px;
+              left:100px;
+          }
+
+
+      .Menu{
+        width:700px;
+        height:100px;
+        position:absolute;
+        top:50px;
+        left:1250px;
+
+       }
+
+       .Menu li{
+         list-style-type: none;
+         float: left;
+         margin-left: 90px;
+         font-size: 30px;
+       }
+             a {
+               text-decoration: none;
+               color:black;
+             }
+
+
+      /*1page*/
+
+      .animationBox{
+
+          width:400px;
+          height:100px;
+          position: absolute;
+          left: 50%; top:50%;
+          transform: translate(-50%,-50%);
+          text-align: center;;
+          display: inline-block;
+        }
+
+
+    .animationText{
+
+
+        width:400px;
+        height:100px;
+
+
+        font-size: 2.4em;
+         color:red;
+      }
+      /*2page*/
+
+      .AnimationIllu1{
+          margin: auto;
+          position: relative;
+          width: 700px;
+          height:700px;
+          top:200px;
+          left:500px;
+      }
+
+      .AnimationIllu1 img{
+          margin: auto;
+          position: absolute;
+          left: 50%; top:50%;
+          transform: translate(-50%,-50%);
+          width: 700px;
+          height:700px;
+
+      }
+
+
+      .animationText1{
+        /*background: red;*/
+        width:600px;
+        height:100px;
+        position: relative;
+        top:-500px;
+        left:300px;
+        font-size: 2.4em;
+        text-align:left;
+        letter-spacing:2px;
+
+
+      }
+      .animationText2{
+        /*background: pink;*/
+        width:430px;
+        height:300px;
+        position: relative;
+        top:-400px;
+        left:300px;
+        font-size: 18pt;
+        text-align:left;
+         line-height:50px;
+         color:#DADADA;
+         letter-spacing:2px;
+
+      }
+      .animationText3{
+        width:400px;
+        height:150px;
+        position: relative;
+        top:-430px;
+        left:900px;
+        text-align:left;
+        font-size: 18pt;
+        line-height:50px;
+        color:#DADADA;
+        letter-spacing:2px;
+
+      }
+
+
+      /*3page*/
+
+      .AnimationIllu2{
+          margin: auto;
+          position: relative;
+          width: 700px;
+          height:700px;
+          top:130px;
+          left:-400px;
+      }
+
+      .AnimationIllu2 img{
+        width: 650px;
+        height:650px;
+          margin: auto;
+          position: absolute;
+          left: 50%; top:50%;
+          transform: translate(-50%,-50%);
+
+      }
+      .animationText4{
+        width:600px;
+        height:100px;
+        position: relative;
+        top:-250px;
+        left:1150px;
+        font-size: 2.4em;
+        text-align:left;
+        letter-spacing:2px;
+
+      }
+
+      .animationText5{
+        width:400px;
+        height:150px;
+        position: relative;
+        top:-130px;
+        left:1000px;
+        text-align:left;
+        font-size: 18pt;
+        line-height:50px;
+        color:#7C7C7C;
+        letter-spacing:2px;
+
+      }
+      .animationText6{
+        width:400px;
+        height:150px;
+        position: relative;
+        top:-730px;
+        left:1320px;
+        text-align:right;
+        font-size: 18pt;
+        line-height:50px;
+        color:#7C7C7C;
+        letter-spacing:2px;
+
+      }
+
+
+      /*4page*/
+
+      .AnimationIllu3{
+
+          margin: auto;
+          position: relative;
+          width: 700px;
+          height:700px;
+          top:200px;
+          left:50px;
+      }
+
+      .AnimationIllu3 img{
+        width: 600px;
+        height:600px;
+          margin: auto;
+          position: absolute;
+          left: 50%; top:50%;
+          transform: translate(-50%,-50%);
+
+      }
+
+      .animationText7{
+        width:600px;
+        height:100px;
+        position: relative;
+        top:20px;
+        left:500px;
+        font-size: 2.4em;
+        text-align:left;
+        letter-spacing:2px;
+
+      }
+
+      .animationText8{
+        width:400px;
+        height:150px;
+        position: relative;
+        top:0px;
+        left:-450px;
+        text-align:left;
+        font-size: 18pt;
+        line-height:50px;
+        color:#494949;
+        letter-spacing:2px;
+
+      }
+
+      .animationText9{
+        width:400px;
+        height:150px;
+        position: relative;
+        top:-160px;
+        left:530px;
+        text-align:right;
+        font-size: 18pt;
+        line-height:50px;
+        color:#494949;
+        letter-spacing:2px;
+
+      }
+
+       #MoveBox{
+         width: 248px;
+         height: 248px;
+         position: relative;
+                top:100px;
+                left:700px;
+            }
+
+              #MoveBox img{
+                position: absolute;
+                left: 50%; top:50%;
+                transform: translate(-50%,-50%);
+                width: 300px;
+                height: 300px;
+              }
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+  <script src="aos.js"></script>
+  <script>
+  AOS.init({
+    easing: 'ease-in-out-sine'
+  });
+  </script>
+
+
+
+<div id="fullpage">
+  <header>
+      <!-- Menu-->
+
+      <div class="Menu">
+        <ul>
+
+           <li><a class="active" href="../index/index.html">홈</a></li>
+           <li><a href="../Test/Test.html">진단</a></li>
+           <li><a href="../Info/Info.html">정보</a></li>
+          <li><a href="../Center/Center.html">센터</a></li>
+        </ul>
+
+      </div>
+        <!-- MenuLogo-->
+
+
+            <div class="Logo">
+              <a href="#"><img src="img/Logo.svg" /></a>
+            </div>
+
+
+
+  </header>
+  <!-- 1page-->
+    <div class="section " id="section0">
+        <div class="Main">
+
+
+    <div class="animationBox">
+       <div class="animationText">
+          <div class="aos-item" data-aos="fade-up" >
+            <h3>“ 뭐라고? ” </h3>
+          </div>
+       </div>
+    </div>
+
+     </div>
+
+    </div>
+
+<!-- 2page-->
+    <div class="section" id="section1">
+      <div class="Main">
+        <div class="AnimationIllu1">
+        <img src="img/AnimationIllu1.svg" />
+        </div>
+        <div class="animationText1">
+          <div class="aos-item" data-aos="fade-up">
+            <h2>“ 힘들면 내게 말해줘 ”</h2></div>
+
+        </div>
+
+        <div class="animationText2">
+          <div class="aos-item" data-aos="fade-down">
+‘ 나에게도 아픔이 있다 <br>
+&nbsp;&nbsp;선뜻 그것을 말하기엔 조심스럽지만<br>
+&nbsp;&nbsp;위로가 큰 힘이 된다 ’<br>
+          </div>
+        </div>
+
+        <div class="animationText3">
+          <div class="aos-item" data-aos="fade-down">
+            ‘ 소중한 사람들은<br>
+            &nbsp;&nbsp;언제나 마음과 귀가 열려있다 ’ </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+<!-- 3page-->
+    <div class="section" id="section2">
+      <div class="Main">
+
+
+          <div class="AnimationIllu2">
+          <img src="img/AnimationIllu2.svg" />
+          </div>
+          <div class="animationText4">
+            <div class="aos-item" data-aos="fade-down">
+              <h3> “ 그건 니 잘못이 아니야 ”</h3>
+            </div>
+          </div>
+          <div class="animationText5">
+            <div class="aos-item" data-aos="fade-down">
+              “ 자책은 착각이야<br>
+              &nbsp;&nbsp;아무도 너에게 채찍질 하지 않아 ”
+            </div>
+          </div>
+          <div class="animationText6">
+            <div class="aos-item" data-aos="fade-down">
+              “ 스스로를&nbsp;&nbsp;<br>
+              상처주고 채찍질 하지마 ”
+          </div>
+
+
+
+    </div>
+  </div>
+<!-- 4page-->
+    <div class="section" id="section3">
+      <div class="Main">
+
+        <div class="AnimationIllu3">
+        <img src="img/AnimationIllu3.svg" />
+
+        <div class="animationText7">
+          <div class="aos-item" data-aos="fade-down">
+            <h3> “ 충분히 잘 해내고 있어”</h3>
+          </div>
+        </div>
+        <div class="animationText8">
+          <div class="aos-item" data-aos="fade-down">
+            “ 너무 조바심 내지마<br>
+              &nbsp;&nbsp;조금씩 앞으로 나아가다 보면<br>
+              &nbsp;&nbsp;어느새 도착지에 와있을 거야 ”
+
+          </div>
+        </div>
+        <div class="animationText9">
+          <div class="aos-item" data-aos="fade-down">
+            <h3>“ 너는 이겨 낼 수 있을거야 ” </h3>
+          </div>
+
+        </div>
+
+
+          <div id="MoveBox">
+          <a href="../Info/Info.html"><img src="img/MoveInfo.svg" /></a>
+          </div>
+
+        </div>
+
+
+
+
+    </div>
+  </div>
+
+  </div>
+
+
+<script type="text/javascript" src="fullpage.js"></script>
+<script type="text/javascript" src="examples.js"></script>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        menu: '#menu',
+        anchors: ['firstPage', 'secondPage', '3rdPage'],
+        sectionsColor: ['#fffff', '#fffff', '#fffff','#fffff'],
+        autoScrolling: false,
+        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
+    });
+</script>
+
+</body>
+</html>

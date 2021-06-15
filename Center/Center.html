@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Normal scrolling - fullPage.js</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage full-screen normal scrolling with autoScrolling." />
+    <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,normal scroll,autoscrolling, scroll" />
+    <meta name="Resource-type" content="Document" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="aos.css" />
+
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="examples.css" />
+    <script src="aos.js"></script>
+    <script>
+    AOS.init({
+      easing: 'ease-in-out-sine'
+    });
+    </script>
+    <style>
+
+    @font-face {
+      font-family: 'RIDIBatang';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+                         }
+    * {padding: 0; margin: 0;}
+
+      body{
+        font-family:'RIDIBatang',
+        '리디바탕',
+         ng;
+
+      }
+
+
+      header{
+        background: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 75px;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+      }
+      .Main{position: relative;
+			height: 100vh;}
+
+      .Logo {
+        width:600px;
+        height:375px;
+        position:relative;
+        top:-750px;
+        left:-250px;
+         }
+
+         .Logo img {
+              position: relative;
+              top:680px;
+              left:100px;
+          }
+
+
+      .Menu{
+        width:700px;
+        height:100px;
+        position:absolute;
+        top:50px;
+        left:1250px;
+
+       }
+
+       .Menu li{
+         list-style-type: none;
+         float: left;
+         margin-left: 90px;
+         font-size: 30px;
+       }
+             a {
+               text-decoration: none;
+               color:black;
+             }
+
+
+      /*1page*/
+
+
+        .Map{
+            margin: auto;
+            position: relative;
+            width: 650px;
+            height:650px;
+            top:700px;
+            left:0px;
+        }
+
+        .Map img{
+            margin: auto;
+            position: absolute;
+            left: 50%; top:50%;
+            transform: translate(-50%,-50%);
+            width: 1500px;
+            height:1500px;
+
+        }
+
+        .MapText1{
+
+          width:400px;
+          height:100px;
+          position: relative;
+          top:-530px;
+          left:-350px;
+          font-size: 2.6em;
+          text-align:left;
+          letter-spacing:3px;
+          color:black;
+        }
+
+        .MapText2{
+
+          width:600px;
+          height:100px;
+          position: relative;
+          top:-550px;
+          left:450px;
+          font-size: 1em;
+          text-align:right;
+          letter-spacing:2px;
+          line-height: 30px;
+        }
+
+        .MapText3{
+
+          width:300px;
+          height:100px;
+          position: relative;
+          top:-400px;
+          left:-350px;
+          font-size: 1.6em;
+          text-align:left;
+          letter-spacing:2px;
+          color:black;
+        }
+
+        .MapText4{
+
+          width:400px;
+          height:100px;
+          position: relative;
+          top:-350px;
+          left:800px;
+          font-size: 2em;
+          text-align:left;
+          letter-spacing:2px;
+          color:black;
+        }
+
+
+        .MapText5{
+
+          width:600px;
+          height:100px;
+          position: relative;
+          top:100px;
+          left:-450px;
+          font-size: 2.8em;
+          text-align:left;
+          letter-spacing:2px;
+          line-height: 55px;
+          color:black;
+        }
+
+        .MapText6{
+
+          width:600px;
+          height:100px;
+          position: relative;
+          top:180px;
+          left:650px;
+          font-size: 1.6em;
+          text-align:left;
+          letter-spacing:2px;
+          color:black;
+          line-height: 40px;
+        }
+
+        .MapText7{
+
+          width:900px;
+          height:100px;
+          position: relative;
+          top:400px;
+          left:200px;
+          font-size: 1.5em;
+          text-align:left;
+          letter-spacing:2px;
+          color:black;
+        }
+
+
+        .Seoul img{
+            margin: auto;
+            position: absolute;
+            left: 32%; top:-30%;
+              z-index: 1;
+            transform: translate(-50%,-50%);
+            width: 100px;
+            height:100px;
+
+        }
+
+
+        .Incheon img{
+            margin: auto;
+            position: absolute;
+            left: 8%; top:-25%;
+              z-index: 1;
+            transform: translate(-50%,-50%);
+            width: 100px;
+            height:100px;
+
+        }
+
+
+
+        .Gyeonggi img{
+            margin: auto;
+            position: absolute;
+            left: 40%; top:-10%;
+              z-index: 1;
+            transform: translate(-50%,-50%);
+            width: 100px;
+            height:100px;
+
+        }
+
+
+        .Gangwon img{
+          position: absolute;
+          left: 70%; top:-30%;
+          transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            width: 100px;
+            height:100px;
+
+        }
+
+
+        .ChungNam img{
+            margin: auto;
+            position: absolute;
+            left: 5%; top:28%;
+              z-index: 1;
+            transform: translate(-50%,-50%);
+            width: 100px;
+            height:100px;
+
+        }
+
+
+
+        .Sejong img{
+            margin: auto;
+            position: absolute;
+            left: 35%; top:15%;
+              z-index: 1;
+            transform: translate(-50%,-50%);
+            width: 100px;
+            height:100px;
+
+        }
+
+
+        .Daejeon img{
+            margin: auto;
+            position: absolute;
+            left: 40%; top:28%;
+              z-index: 1;
+            transform: translate(-50%,-50%);
+            width: 100px;
+            height:100px;
+
+        }
+
+
+        .ChungBuk img{
+            margin: auto;
+            position: absolute;
+            left: 55%; top:10%;
+              z-index: 1;
+            transform: translate(-50%,-50%);
+            width: 100px;
+            height:100px;
+
+        }
+
+
+
+        .Gyeongbuk img{
+            margin: auto;
+            position: absolute;
+            left: 85%; top:35%;
+              z-index: 1;
+            transform: translate(-50%,-50%);
+            width: 100px;
+            height:100px;
+
+        }
+
+
+                .Jeollabuk img{
+                    margin: auto;
+                    position: absolute;
+                    left: 30%; top:65%;
+                    transform: translate(-50%,-50%);
+                    width: 100px;
+                    height:100px;
+                      z-index: 1;
+
+                }
+
+
+                .Gwangju img{
+                    margin: auto;
+                    position: absolute;
+                    left: 15%; top:80%;
+                    transform: translate(-50%,-50%);
+                    width: 100px;
+                    height:100px;
+                      z-index: 1;
+
+                }
+
+
+                .Jeonnam img{
+                    margin: auto;
+                    position: absolute;
+                    left: 30%; top:110%;
+                    transform: translate(-50%,-50%);
+                    width: 100px;
+                    height:100px;
+                    z-index: 1;
+
+                }
+
+
+                .Jeju img{
+                    margin: auto;
+                    position: absolute;
+                    left: 10%; top:150%;
+                    transform: translate(-50%,-50%);
+                    width: 100px;
+                    height:100px;
+                    z-index: 1;
+
+                }
+
+
+                .Daegu img{
+                    margin: auto;
+                    position: absolute;
+                    left: 85%; top:65%;
+                    transform: translate(-50%,-50%);
+                    width: 100px;
+                    height:100px;
+                    z-index: 1;
+
+                }
+
+
+                .Ulsan img{
+                    margin: auto;
+                    position: absolute;
+                    left: 108%; top:70%;
+                    transform: translate(-50%,-50%);
+                    width: 100px;
+                    height:100px;
+                      z-index: 1;
+
+                }
+
+
+
+                .Gyeongnam img{
+                    margin: auto;
+                    position: absolute;
+                    left: 65%; top:85%;
+                    transform: translate(-50%,-50%);
+                    width: 100px;
+                    height:100px;
+                      z-index: 1;
+
+                }
+
+
+                .Pusan img{
+                    margin: auto;
+                    position: absolute;
+                    left: 105%; top:90%;
+                    transform: translate(-50%,-50%);
+                    width: 100px;
+                    height:100px;
+                    z-index: 1;
+
+
+                }
+
+
+
+
+
+
+      /*2page*/
+
+
+
+
+      /*3page*/
+
+      </style>
+
+
+</head>
+<body>
+
+
+
+
+<div id="fullpage">
+  <header>
+      <!-- Menu-->
+
+          <div class="Menu">
+            <ul>
+
+               <li><a class="active" href="../index/index.html">홈</a></li>
+               <li><a href="../Test/Test.html">진단</a></li>
+               <li><a href="../Info/Info.html">정보</a></li>
+              <li><a href="../Center/Center.html">센터</a></li>
+            </ul>
+
+          </div>
+        <!-- MenuLogo-->
+
+
+            <div class="Logo">
+              <a href="#"><img src="img/Logo.svg" /></a>
+            </div>
+
+
+
+  </header>
+  <!-- 1page-->
+    <div class="section " id="section0">
+        <div class="Main">
+          <div class="Map">
+              <img src="img/Map.svg" />
+
+              <div class="MapText1">
+                망설이지 말고 <br>
+                언제든지 연락해
+              </div>
+
+              <div class="MapText2">
+                지도를 클릭하면,<br>
+                해당 지역의 센터 웹사이트로 이동합니다
+              </div>
+
+              <div class="MapText3">
+                93년생 <br>
+                나는 3살입니다
+              </div>
+
+              <div class="MapText4">
+                54년생 <br>
+                나는 11살입니다
+              </div>
+
+
+
+              <div class="MapText5">
+                01년생 <br>
+                나는 2살입니다
+              </div>
+
+              <div class="MapText6">
+                자살 위기를 넘기지 못했다면 <br>
+                누리지 못할 두번째 삶
+              </div>
+
+              <div class="MapText7">
+                삶의 이야기가 시작되면 고통의 끝이 보입니다.
+
+              </div>
+
+
+
+              <div class="Seoul" >
+                <a href="http://www.suicide.or.kr/"><img src="img/Seoul.svg" /></a>
+
+              </div>
+
+              <div class="Incheon">
+                <a href="http://www.ispc.or.kr/00_main/main.php"><img src="img/Incheon.svg" /></a>
+
+              </div>
+
+              <div class="Gyeonggi">
+                <a href="https://www.mentalhealth.or.kr/"><img src="img/Gyeonggi.svg" /></a>
+
+              </div>
+
+              <div class="Gangwon">
+                <a href="https://gwmh.or.kr:446/document/sub02_1"><img src="img/Gangwon.svg" /></a>
+
+              </div>
+
+              <div class="ChungNam">
+                <a href="http://www.spckorea.or.kr/"><img src="img/ChungNam.svg" /></a>
+
+              </div>
+
+              <div class="Sejong">
+                <a href="http://www.spckorea.or.kr/"><img src="img/Sejong.svg" /></a>
+
+              </div>
+
+              <div class="Daejeon">
+                <a href="https://www.djpmhc.or.kr/index.php"><img src="img/Daejeon.svg" /></a>
+
+              </div>
+
+              <div class="ChungBuk">
+                <a href="https://www.cbmind.or.kr/"><img src="img/ChungBuk.svg" /></a>
+
+              </div>
+
+              <div class="Gyeongbuk">
+                <a href="http://www.spckorea.or.kr/"><img src="img/Gyeongbuk.svg" /></a>
+
+              </div>
+
+              <div class="Jeollabuk">
+                <a href="http://www.spckorea.or.kr/"><img src="img/Jeollabuk.svg" /></a>
+
+              </div>
+
+              <div class="Gwangju">
+                <a href="http://www.gmhc.kr/"><img src="img/Gwangju.svg" /></a>
+
+              </div>
+
+              <div class="Jeonnam">
+                <a href="http://www.spckorea.or.kr/"><img src="img/Jeonnam.svg" /></a>
+
+              </div>
+
+              <div class="Jeju">
+                <a href="http://www.spckorea.or.kr/"><img src="img/Jeju.svg" /></a>
+
+              </div>
+
+              <div class="Daegu">
+                <a href="https://www.dgmhc.or.kr/mind/"><img src="img/Daegu.svg" /></a>
+
+              </div>
+
+              <div class="Ulsan">
+                <a href="http://www.bukgumental.or.kr/main.html"><img src="img/Ulsan.svg" /></a>
+
+              </div>
+
+              <div class="Gyeongnam">
+                <a href="http://www.spckorea.or.kr/"><img src="img/Gyeongnam.svg" /></a>
+
+              </div>
+
+              <div class="Pusan">
+                <a href="http://suicide.busaninmaum.com/"><img src="img/Pusan.svg" /></a>
+
+              </div>
+
+
+
+
+          </div>
+
+
+    </div>
+
+<!-- 2page-->
+    <div class="section" id="section1">
+      <div class="Main">
+      </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
