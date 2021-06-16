@@ -26,7 +26,7 @@
         '리디바탕',
          ng;
 
-        background-image: url('img/IndexImg.jpg');
+        background-image: url('Index/img/IndexImg.jpg');
         background-repeat : no-repeat;
       }
 
@@ -188,7 +188,7 @@ body{
 
 
         <div class="Logo">
-          <a href="#"><img src="img/Logo.svg" /></a>
+          <a href="#"><img src="Index/img/Logo.svg" /></a>
         </div>
 
 
@@ -207,7 +207,7 @@ body{
 <!--움직이는 공-->
 <div id="dragtarget" ondragstart="dragStart(event)" draggable="true">
 
-<img src="./Drag/ball.svg" id="ball">
+<img src="Index/Drag/ball.svg" id="ball">
 </div>
 
 
@@ -224,11 +224,11 @@ function allowDrop(event) {
     event.preventDefault();
 }
 function drop(event) {
-  location.href="../indexLeft/indexLeft.html";
+  location.href="indexLeft/indexLeft.html";
 }
 
 function dropItem(Event) {
-  location.href="../indexRight/indexRight.html";
+  location.href="indexRight/indexRight.html";
 }
 
 
