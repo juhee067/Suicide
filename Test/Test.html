@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Normal scrolling - fullPage.js</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage full-screen normal scrolling with autoScrolling." />
+    <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,normal scroll,autoscrolling, scroll" />
+    <meta name="Resource-type" content="Document" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="aos.css" />
+
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="examples.css" />
+    <script>
+    function button1(){
+      document.getElementById("Img1").src = "img/Letter1.svg";
+
+    }
+    function button2(){
+      document.getElementById("Img1").src = "img/Letter2.svg";
+    }
+
+    function button3(){
+      document.getElementById("Img1").src = "img/Letter3.svg";
+    }
+
+    function button4(){
+      document.getElementById("Img2").src = "img/TestQ2.svg";
+      $( '#ButtonRight' ).hide();
+      $( '#ButtonLeft' ).show();
+
+
+    }
+
+    function button5(){
+      document.getElementById("Img2").src = "img/TestQ1.svg";
+      $( '#ButtonLeft' ).hide();
+      $( '#ButtonRight' ).show();
+
+
+    }
+    </script>
+    <style>
+
+    @font-face {
+      font-family: 'RIDIBatang';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+                         }
+    * {padding: 0; margin: 0;}
+
+      body{
+        font-family:'RIDIBatang',
+        '리디바탕',
+         ng;
+
+      }
+
+
+      header{
+          background: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 75px;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+          z-index: 2;
+      }
+      .Main{position: relative;
+			height: 100vh;}
+
+      .Logo {
+        width:600px;
+        height:375px;
+        position:relative;
+        top:-750px;
+        left:-250px;
+         }
+
+         .Logo img {
+              position: relative;
+              top:680px;
+              left:100px;
+          }
+
+
+      .Menu{
+        width:700px;
+        height:100px;
+        position:absolute;
+        top:50px;
+        left:1250px;
+
+       }
+
+       .Menu li{
+         list-style-type: none;
+         float: left;
+         margin-left: 90px;
+         font-size: 30px;
+       }
+             a {
+               text-decoration: none;
+               color:black;
+             }
+
+
+      /*1page*/
+
+      .MainTitle {
+        width: 100px;
+        height: 100px;
+        position:relative;
+        top:180px;
+        left:370px;}
+
+        .MainTitle img {
+          margin: auto;
+          position: absolute;
+          left: 50%; top:50%;
+          transform: translate(-50%,-50%);
+          width: 300px;
+          height:300px;}
+
+
+
+      .hrbox1 { width: 500px; height: 560px;}
+
+      .Testillust {
+        width: 200px;
+        height: 200px;
+        position:relative;
+        top:220px;
+        left:860px;
+       z-index: 2;}
+
+
+       .Testillust img {
+         width: 400px;
+         height: 400px;
+
+         position: absolute;
+         left: 50%; top:50%;
+         transform: translate(-50%,-50%);}
+
+      .TestText {
+        width: 910px;
+        height: 300px;
+        position:absolute;
+        top:650px;
+        left:500px;
+        font-size: 18px;
+        text-align: center;
+        line-height: 250%;}
+
+                 hr {position:relative;
+                 top:-306px;
+                 z-index: 0;
+
+                   border-top:4px solid black;
+                     }
+
+      .TestTextBtn{
+        width: 110px;
+        height:110px;
+       position:absolute;
+       top:425px;
+       left:1285px;}
+
+
+
+/* btn */
+
+.btn-wrap > a {
+background-color:#fff;
+display:inline-block;
+position:absolute; top:439px; left:1312px;
+
+ font-size: 18px; text-align: center; padding-top: 6px;
+ width: 55px; height:35px;
+
+}
+
+
+.TextBox {width: 500px; height: 500px; border:1px solid black;}
+.Test2Img{position: absolute; top:100px;right:300px;}
+.Test3Img{position: absolute; top:200px;right:400px;}
+
+
+      /*2page*/
+
+      .TestResult{
+          margin: auto;
+          position: relative;
+          width: 650px;
+          height:650px;
+          top:190px;
+          left:50px;
+      }
+
+      .TestResult img{
+          margin: auto;
+          position: absolute;
+          left: 50%; top:50%;
+          transform: translate(-50%,-50%);
+          width: 1300px;
+          height:1300px;
+
+      }
+
+      .TestResult1{
+          margin: auto;
+          position: relative;
+          width: 250px;
+          height:150px;
+          top:-45px;
+          left:-280px;
+      }
+
+      .TestResult1 img{
+          margin: auto;
+          position: absolute;
+          left: 50%; top:50%;
+          transform: translate(-50%,-50%);
+          width: 150px;
+          height:150px;
+
+      }
+
+      .TestResult2{
+          margin: auto;
+          position: relative;
+          width: 250px;
+          height:150px;
+          top:-355px;
+          left:0px;
+      }
+
+      .TestResult2 img{
+          margin: auto;
+          position: absolute;
+          left: 50%; top:50%;
+          transform: translate(-50%,-50%);
+          width: 150px;
+          height:150px;
+          transform: rotate( 25deg )
+
+      }
+
+      .TestResult3{
+          margin: auto;
+          position: relative;
+          width: 250px;
+          height:150px;
+          top:-420px;
+          left:550px;
+      }
+
+      .TestResult3 img{
+          margin: auto;
+          position: absolute;
+          left: 50%; top:50%;
+          transform: translate(-50%,-50%);
+          width: 80px;
+          height:80px;
+          transform: rotate( -25deg )
+
+      }
+
+
+
+      /*3page*/
+
+      .Letter1{
+          margin: auto;
+          position: relative;
+          width: 250px;
+          height:150px;
+          top:450px;
+          left:0px;
+      }
+
+      .Letter1 img{
+
+          position: absolute;
+          left: 50%; top:50%;
+          transform: translate(-50%,-50%);
+          width: 1100px;
+          height:1100px;
+
+
+      }
+
+
+
+.box1{
+  width: 200px;
+  height:50px;
+ position:relative;
+ top:185px;
+ left:415px;
+}
+
+.box1 button {
+ position: absolute;
+ left: 50%; top:50%;
+ transform: translate(-50%,-50%);
+
+
+width:200px;
+
+background-color: white;
+
+border: none;
+
+color:black;
+font-family: 'RIDIBatang';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+
+
+text-align: center;
+
+text-decoration: none;
+
+display: inline-block;
+
+font-size: 25px;
+
+margin: 4px;
+
+cursor: pointer;
+
+}
+
+.box2{
+  width: 200px;
+  height:50px;
+ position:relative;
+ top:300px;
+ left:415px;
+}
+
+.box2 button {
+ position: absolute;
+ left: 50%; top:50%;
+ transform: translate(-50%,-50%);
+
+
+width:200px;
+
+background-color: white;
+
+border: none;
+
+color:black;
+font-family: 'RIDIBatang';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+
+
+text-align: center;
+
+text-decoration: none;
+
+display: inline-block;
+
+font-size: 25px;
+
+margin: 4px;
+
+cursor: pointer;
+
+}
+
+.box3{
+  width: 200px;
+  height:50px;
+ position:relative;
+ top:417px;
+ left:375px;
+}
+
+.box3 button {
+ position: absolute;
+ left: 50%; top:50%;
+ transform: translate(-50%,-50%);
+   padding: 7px 0;
+
+
+width:120px;
+
+background-color: white;
+
+border: none;
+
+color:black;
+font-family: 'RIDIBatang';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+
+
+text-align: center;
+
+text-decoration: none;
+
+display: inline-block;
+
+font-size: 25px;
+
+margin: 4px;
+
+cursor: pointer;
+
+}
+
+/* btn */
+
+.btn-wrap > a {
+background-color:#fff;
+display:inline-block;
+position:absolute; top:439px; left:1312px;
+
+ font-size: 18px; text-align: center; padding-top: 6px;
+ width: 55px; height:35px;
+
+}
+/* modal */
+
+.modal-cont img:nth-child(2){position:absolute; top: 50%; left: 100%}
+.modal-cont img:nth-child(3){position:absolute; top: 50%; left:-10%}
+#Img2{position:absolute; top: 0; left: 0%;  width:100%; height:100%; }
+
+
+#modal {
+position: fixed; left:0; top:0;
+width: 100%; height: 100%;
+transform: scale(0);
+z-index: 3;
+}
+#modal .modal-bg {
+background: rgba(0,0,0,0.7);
+display:flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+}
+#modal .modal-bg .modal-cont {
+position:relative;
+background: #fff;
+padding: 40px;
+max-width: 1100px;
+display: inline-block;
+height: 80%;
+width:  100%;
+border-radius: 10px;
+
+
+}
+#modal .modal-bg .modal-cont h2 {
+font-size: 30px;
+margin:0;
+}
+#modal .modal-bg .modal-cont p {
+font-size: 18px;
+}
+/* modalButton */
+#modal .modal-bg .modal-cont .close {
+position: absolute; top: 0; right:0;
+margin:20px;
+background: #000;
+width: 3%; height: 4%;
+
+}
+
+#modal.three {
+transform: scaleY( 1 );
+
+
+
+
+}
+#modal.three .modal-bg {
+background: rgba(0,0,0,0);
+animation: fadeIn 0.5s cubic-bezier(0.165, 0.85, 0.44, 1) forwards;
+}
+#modal.three .modal-bg .modal-cont {
+opacity: 0;
+animation: scaleUp 0.5s cubic-bezier(0.165, 0.85, 0.44, 1) forwards;
+}
+#modal.three.out {
+animation: quickScaleDown 0s .5s linear forwards;
+}
+#modal.three.out .modal-bg {
+background: rgba(0,0,0,0);
+animation: fadeOut 0.5s cubic-bezier(0.165, 0.85, 0.44, 1) forwards;
+}
+#modal.three.out .modal-bg .modal-cont {
+opacity: 0;
+animation: scaleDown 0.5s cubic-bezier(0.165, 0.85, 0.44, 1) forwards;
+}
+
+@keyframes fadeIn {
+0% {background: rgba(0,0,0,0)}
+100% {background: rgba(0,0,0,0.7)}
+}
+@keyframes fadeOut {
+0% {background: rgba(0,0,0,0.7)}
+100% {background: rgba(0,0,0,0)}
+}
+@keyframes scaleUp {
+0% {transform: scale(0.5) translatey(1000px); opacity:0}
+100% {transform: scale(1) translatey(0px); opacity:1}
+}
+@keyframes scaleDown {
+0% {transform: scale(1) translatey(0px); opacity:1}
+100% {transform: scale(0.5) translatey(1000px); opacity:0}
+}
+@keyframes quickScaleDown {
+0% {transform: scale(1);}
+99.9% {transform: scale(1); }
+100% {transform: scale(0); }
+}
+
+
+    </style>
+z
+
+</head>
+<body>
+  <script src="aos.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(".btn").click(function(){
+        $("#modal").removeAttr("class").addClass("three");
+    });
+
+    $(".close").click(function(){
+        $("#modal").addClass("out");
+    });
+  </script>
+  <script>
+  AOS.init({
+    easing: 'ease-in-out-sine'
+  });
+
+  window.onload = function() {
+
+   function onClick() {
+       document.querySelector('.modal_wrap').style.display ='block';
+       document.querySelector('.black_bg').style.display ='block';
+   }
+   function offClick() {
+       document.querySelector('.modal_wrap').style.display ='none';
+       document.querySelector('.black_bg').style.display ='none';
+   }
+
+   document.getElementById('modal_btn').addEventListener('click', onClick);
+   document.querySelector('.modal_close').addEventListener('click', offClick);
+
+};
+
+
+
+
+  </script>
+
+
+
+<div id="fullpage">
+  <header>
+      <!-- Menu-->
+
+      <div class="Menu">
+        <ul>
+
+         <li><a class="active" href="../index.html">홈</a></li>
+         <li><a href="Test.html">진단</a></li>
+         <li><a href="../Info/Info.html">정보</a></li>
+        <li><a href="../Center/Center.html">센터</a></li>
+      </ul>
+
+      </div>
+        <!-- MenuLogo-->
+
+
+            <div class="Logo">
+              <a href="#"><img src="img/Logo.svg" /></a>
+            </div>
+
+
+
+  </header>
+  <!-- 1page-->
+    <div class="section " id="section0">
+        <div class="Main">
+
+          <div class="MainTitle">
+             <img src="img/MainTitle.svg" />
+          </div>
+
+          <div class="Testillust">
+               <a href="#"><img src="TestIllu.png" /></a>
+          </div>
+          <div class="hrbox1">
+
+          </div>
+
+          <div class="btn-wrap">
+            <div class="TestTextBtn">
+            <img src="TestBtn1.png" />
+            </div>
+        		<a href="#" class="btn">테스트</a>
+        	</div>
+
+          <div id="modal">
+        	    <div class="modal-bg">
+        	        <div class="modal-cont">
+
+        	            <img src="img/TestQ1.svg"  id="Img2">
+
+
+                          <img src="img/TestQ1Right.svg" onclick="button4()" width="10%" height="10%" id="ButtonRight">
+                          <img src="img/TestQ1Left.svg" onclick="button5()" width="10%" height="10%" id="ButtonLeft"
+                          style visibility="hidden">
+
+
+        	            <a href="#" class="close close1">
+
+        	            </a>
+        	        </div>
+        	    </div>
+        	</div>
+
+
+
+        	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        	<script type="text/javascript">
+        		$(".btn").click(function(){
+        		    $("#modal").removeAttr("class").addClass("three");
+        		});
+
+        		$(".close").click(function(){
+        		    $("#modal").addClass("out");
+        		});
+        	</script>
+          <hr></hr>
+          <div class="TestText">
+            우울증 자가진단 테스트 후에 복잡한 생각이 든다면 지금,<br>
+            오늘만큼은 내가 좋아하는 일 혹은 내 마음의 에너지를 채울 수 있는 일들로 쉬어가는 시간을 가지는 건 어떨까요?<br><br>
+
+            우울증 예방 또는 극복을 위하여 자기 자신의 상태를 먼저 아는 노력이 무엇보다 가장 중요합니다.<br>
+
+          </div>
+
+
+
+
+
+     </div>
+
+    </div>
+
+<!-- 2page-->
+    <div class="section" id="section1">
+      <div class="Main">
+
+        <div class="TestResult">
+          <img src="img/TestResult.svg" />
+        </div>
+
+        <div class="TestResult1">
+           <a href="#Letter"><img src="img/TestResult1.svg" /></a>
+        </div>
+
+        <div class="TestResult2">
+           <a href="../Info/Info.html"><img src="img/TestResult2.svg" /></a>
+        </div>
+
+        <div class="TestResult3">
+           <a href="../Center/Center.html"><img src="img/TestResult3.svg" /></a>
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+<!-- 3page-->
+    <div class="section" id="section2">
+      <div class="Main" id="Letter">
+
+        <div class="Letter1">
+           <img src="img/Letter1.svg" / id="Img1">
+        </div>
+
+        <div class="box1">
+          <button onclick="button1()" id="button1">너 잘못이 아니야</button>
+        </div>
+
+        <div class="box2">
+          <button onclick="button2()" id="button1">너 혼자가 아니야</button>
+        </div>
+
+        <div class="box3">
+          <button onclick="button3()" id="button1">아프지마</button>
+        </div>
+
+
+
+
+    </div>
+  </div>
+
+
+  </div>
+
+
+<script type="text/javascript" src="fullpage.js"></script>
+<script type="text/javascript" src="examples.js"></script>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        menu: '#menu',
+        anchors: ['firstPage', 'secondPage', '3rdPage'],
+        sectionsColor: ['#fffff', '#fffff', '#fffff','#fffff'],
+        autoScrolling: false,
+        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
+    });
+</script>
+
+</body>
+</html>
